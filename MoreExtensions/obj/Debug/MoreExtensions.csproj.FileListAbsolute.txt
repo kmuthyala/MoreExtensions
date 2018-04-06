@@ -1,0 +1,7 @@
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\bin\Debug\MoreExtensions.dll
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\bin\Debug\MoreExtensions.pdb
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\obj\Debug\MoreExtensions.csproj.CoreCompileInputs.cache
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\obj\Debug\MoreExtensions.dll
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\obj\Debug\MoreExtensions.pdb
+C:\Users\karthik.muthyala-ctr\source\repos\extensionchanger\MoreExtensions\obj\Debug\MoreExtensions.csprojResolveAssemblyReference.cache
