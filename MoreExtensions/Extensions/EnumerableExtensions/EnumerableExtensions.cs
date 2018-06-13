@@ -13,12 +13,12 @@ namespace MoreExtensions.EnumerableExtensions
     public static bool IsEmpty<T>(this IEnumerable<T> input)
     {
       if (input == null) throw new ArgumentNullException(nameof(input));
-      return input.Count() == 0;
+      return !input.Any();
     }
-    public static bool NonEmpty<T>(this IEnumerable<T> input)
+    public static bool NotEmpty<T>(this IEnumerable<T> input)
     {
       if (input == null) throw new ArgumentNullException(nameof(input));
-      return input.Count() > 0;
+      return input.Any();
     }
     public static string ToDelimitedString<T>(this IEnumerable<T> input, string delimiter)
     {
@@ -27,7 +27,20 @@ namespace MoreExtensions.EnumerableExtensions
 
       return string.Join(delimiter, input);
     }
-    
+
+    /// <summary>
+    /// this can be used to get distinct list of objects based on a property
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="U"></typeparam>
+    /// <param name="enumerable"></param>
+    /// <param name="f"></param>
+    /// <returns></returns>
+    public static IEnumerable<T> DistinctBy<T, U>(this IEnumerable<T> enumerable, Func<T, U> f)
+    {
+      return enumerable.GroupBy(f).Select(x => x.First());
+    }
+
     /// <summary>
     /// Builds a new list by applying a function to all elements of this list. 
     /// </summary>
@@ -81,5 +94,7 @@ namespace MoreExtensions.EnumerableExtensions
         yield return list[i];
       }
     }
+
+
   }
 }
