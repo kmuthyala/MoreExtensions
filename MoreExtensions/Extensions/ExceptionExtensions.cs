@@ -51,12 +51,14 @@ namespace MoreExtensions.Extensions
     }
     private static void GetInnerException(StringBuilder sb, Exception e)
     {
-      if (e.InnerException != null)
+      var innerException = e.InnerException;
+      while (innerException != null)
       {
         AddSeparator(sb);
         sb.AppendLine("Inner Exception:");
         GetMessage(sb, e.InnerException);
         GetStackTrace(sb, e.InnerException);
+        innerException = innerException.InnerException;
       }
     }
 
